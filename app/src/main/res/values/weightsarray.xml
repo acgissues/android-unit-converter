@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weights_array">
+        <item>Gramos</item>
+        <item>Kilogramos</item>
+        <item>Onzas</item>
+        <item>Libras</item>
+    </string-array>
+</resources>

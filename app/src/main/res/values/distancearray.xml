@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="distance_array">
+        <item>cm/pulgadas</item>
+        <item>m/pies</item>
+        <item>km/millas</item>
+    </string-array>
+</resources>

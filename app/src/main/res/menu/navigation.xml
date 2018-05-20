@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_distance"
+        android:icon="@drawable/ruler"
+        android:title="@string/title_distance" />
+
+    <item
+        android:id="@+id/navigation_weight"
+        android:icon="@drawable/weight"
+        android:title="@string/title_weight" />
+
+    <item
+        android:id="@+id/navigation_temp"
+        android:icon="@drawable/thermometer_half"
+        android:title="@string/title_temp" />
+
+</menu>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Conversor de Unidades</string>
+    <string name="title_distance">Distancia</string>
+    <string name="title_weight">Peso</string>
+    <string name="title_temp">Temperatura</string>
+    <string name="clear">Limpiar</string>
+</resources>

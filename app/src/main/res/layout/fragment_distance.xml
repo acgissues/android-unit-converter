@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:context=".TempFragment">
+
+    <TextView
+        android:id="@+id/lblDistTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:text="@string/title_distance" />
+
+    <LinearLayout
+        android:id="@+id/layDistance"
+        android:layout_margin="16dp"
+        android:layout_below="@+id/lblDistTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/txtDistance"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:hint="Distancia"
+            android:inputType="numberDecimal" />
+        <Spinner
+            android:id="@+id/spDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layOptions"
+        android:layout_margin="16dp"
+        android:layout_below="@+id/layDistance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/unitOne"
+            android:layout_marginRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cm -> pulgadas"/>
+        <Button
+            android:id="@+id/unitTwo"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pulgadas -> cm"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/layOptions"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:text="0.00" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_marginTop="16dp"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblResult"
+        android:layout_centerHorizontal="true"
+        android:text="@string/clear" />
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:context=".TempFragment">
+
+    <TextView
+        android:id="@+id/lblWeightTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:text="@string/title_weight" />
+
+
+
+    <LinearLayout
+        android:id="@+id/layWeight"
+        android:layout_margin="16dp"
+        android:layout_below="@+id/lblWeightTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/txtWeight"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:hint="Peso"
+            android:inputType="numberDecimal" />
+        <Spinner
+            android:id="@+id/spWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layResults"
+        android:layout_below="@id/layWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="64dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lblGrams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:text="Gramos: 0.00" />
+        <TextView
+            android:id="@+id/lblKGrams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:text="Kilogramos: 0.00" />
+        <TextView
+            android:id="@+id/lblOunces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:text="Onzas: 0.00" />
+        <TextView
+            android:id="@+id/lblPounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:text="Libras: 0.00" />
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_marginTop="32dp"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layResults"
+        android:layout_centerHorizontal="true"
+        android:text="@string/clear" />
+
+</RelativeLayout>
