@@ -53,6 +53,8 @@ public class WeightFragment extends Fragment {
                 R.array.weights_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spWeight.setAdapter(adapter);
+
+        // Hace el cambio de unidad sin necesidad de introducir nuevos valores
         spWeight.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -72,6 +74,7 @@ public class WeightFragment extends Fragment {
                             weightConverter.setPounds(Double.parseDouble(txtWeight.getText().toString()));
                             break;
                     }
+                    // Actualiza todos los resultados
                     grams.setText("Gramos: " + String.valueOf(weightConverter.getGrams()) + "g");
                     kgrams.setText("Kilogramos: " + String.valueOf(weightConverter.getKgrams()) + "Kg");
                     ounces.setText("Onzas: " + String.valueOf(weightConverter.getOunces()) + "oz");

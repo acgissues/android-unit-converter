@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
 
+    // Para la selección del Fragment a cargar.
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -44,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
+    /*
+    * Método para cargar los Fragment en la vista principal
+    * */
     protected void pushFragment(Fragment fragment) {
         if (fragment == null)
             return;

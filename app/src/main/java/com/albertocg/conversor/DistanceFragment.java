@@ -34,7 +34,7 @@ public class DistanceFragment extends Fragment {
         final Button secondUnit = (Button) view.findViewById(R.id.unitTwo);
         Button clear = (Button) view.findViewById(R.id.btnClear);
 
-        clear.setOnClickListener(new View.OnClickListener() {
+        clear.setOnClickListener(new View.OnClickListener() { // Limpieza de los campos
             @Override
             public void onClick(View v) {
                 result.setText("0.00");
@@ -45,18 +45,18 @@ public class DistanceFragment extends Fragment {
 
         firstUnit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // Acciones del boton izquierdo
                 if(!distance.getText().toString().matches("")){
                     switch(unidad) {
-                        case 0:
+                        case 0: // Centrímetros a pulgadas
                             distanceConverter.setCm(Double.parseDouble(distance.getText().toString()));
                             result.setText(String.valueOf(distanceConverter.getInch()) + "\"");
                             break;
-                        case 1:
+                        case 1: // Metros a pies
                             distanceConverter.setM(Double.parseDouble(distance.getText().toString()));
                             result.setText(String.valueOf(distanceConverter.getFeet()) + "ft");
                             break;
-                        case 2:
+                        case 2: // Kilómetros a millas
                             distanceConverter.setKm(Double.parseDouble(distance.getText().toString()));
                             result.setText(String.valueOf(distanceConverter.getMile()) + "mi");
                             break;
@@ -67,18 +67,18 @@ public class DistanceFragment extends Fragment {
 
         secondUnit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // Acciones del botón derecho
                 if(!distance.getText().toString().matches("")){
                     switch(unidad) {
-                        case 0:
+                        case 0: // Pulgadas a Centímetros
                             distanceConverter.setInch(Double.parseDouble(distance.getText().toString()));
                             result.setText(String.valueOf(distanceConverter.getCm()) + "cm");
                             break;
-                        case 1:
+                        case 1: // Pies a Metros
                             distanceConverter.setFeet(Double.parseDouble(distance.getText().toString()));
                             result.setText(String.valueOf(distanceConverter.getM()) + "m");
                             break;
-                        case 2:
+                        case 2: // Millas a kilómetros
                             distanceConverter.setMile(Double.parseDouble(distance.getText().toString()));
                             result.setText(String.valueOf(distanceConverter.getKm()) + "Km");
                             break;
@@ -91,6 +91,8 @@ public class DistanceFragment extends Fragment {
                 R.array.distance_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spDistance.setAdapter(adapter);
+
+        // Se actualizan los textos de los botones
         spDistance.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

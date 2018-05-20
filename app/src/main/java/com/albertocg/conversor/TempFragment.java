@@ -35,7 +35,7 @@ public class TempFragment extends Fragment {
 
         btnToFahren.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // De Celsius a Fahrenheit
                 if(!txtTemp.getText().toString().matches("")){
                     tempConverter.setCelsius(Float.parseFloat(txtTemp.getText().toString()));
                     result.setText(String.valueOf(tempConverter.getFahrenheit()) + "F");
@@ -47,7 +47,7 @@ public class TempFragment extends Fragment {
 
         btnToCelsius.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // De Fahrenheit a Celsius
                 if(!txtTemp.getText().toString().matches("")){
                     tempConverter.setFahrenheit(Float.parseFloat(txtTemp.getText().toString()));
                     result.setText(String.valueOf(tempConverter.getCelsius()) + "C°");
